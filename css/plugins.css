@@ -24863,6 +24863,7 @@ iframe {
   border: 0;
   vertical-align: top;
   max-width: 100%;
+  width: 100%;
 }
 p {
   margin: 0 0 20px;
