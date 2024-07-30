@@ -39,7 +39,7 @@
     <link href="css/styles.css" rel="stylesheet" />
   </head>
 
-  <body>
+  <body onload="translate('en','lng-tag')">
     <div id="preloader"></div>
 
     <div class="main-wrapper">
@@ -49,14 +49,13 @@
             <div class="row align-items-center">
               <div class="col-12 col-lg-12">
                 <div class="menu_area alt-font">
-                  <nav class="navbar navbar-expand-lg navbar-light p-0">
+                  <nav
+                    class="navbar navbar-expand-lg navbar-light p-0 position-relative"
+                  >
                     <div class="navbar-header navbar-header-custom">
                       <!-- start logo -->
                       <a href="index.html" class="navbar-brand"
-                        ><img
-                          id="logo"
-                          src="img/logos/logo-inner.png"
-                          alt="logo"
+                        ><img id="logo" src="img/logos/logo.png" alt="logo"
                       /></a>
                       <!-- end logo -->
                     </div>
@@ -70,16 +69,18 @@
                       style="display: none"
                     >
                       <li>
-                        <a href="index.html">Home</a>
+                        <a lng-tag="home" href="index.html">Home</a>
                       </li>
                       <li>
-                        <a href="about-us.html">About Us</a>
+                        <a lng-tag="about" href="about-us.html">About Us</a>
                       </li>
                       <li>
-                        <a href="our-services.html">Our Services</a>
+                        <a lng-tag="ourservices" href="our-services.html"
+                          >Our Services</a
+                        >
                       </li>
                       <li>
-                        <a href="contact.html">Contact</a>
+                        <a lng-tag="contact" href="contact.html">Contact</a>
                       </li>
                     </ul>
                     <!-- end menu area -->
@@ -88,10 +89,27 @@
                     <div
                       class="attr-nav align-items-xl-center ms-xl-auto main-font"
                     >
-                      <ul>
+                      <ul class="navbar-third">
                         <li class="d-none d-xl-inline-block">
-                          <a href="contact.html" class="butn text-white md"
+                          <a
+                            lng-tag="freequote"
+                            href="contact.html"
+                            class="butn text-white md"
                             ><span>Free Quote</span></a
+                          >
+                        </li>
+                        <li class="d-inline-flex">
+                          <span
+                            class="butn text-white md cursor-pointer"
+                            id="enTranslator"
+                            >En</span
+                          >
+                        </li>
+                        <li class="d-inline-flex">
+                          <span
+                            class="butn text-white md cursor-pointer"
+                            id="arTranslator"
+                            >عربي</span
                           >
                         </li>
                       </ul>
@@ -116,18 +134,24 @@
               <div class="d-table-cell align-middle">
                 <div class="row align-items-center">
                   <div class="col-md-10 col-lg-9 col-xl-7">
-                    <span class="text-secondary mb-3 sub-title"
+                    <span
+                      lng-tag="welcome"
+                      class="text-secondary mb-3 sub-title"
                       >Welcome to Al Hadmool</span
                     >
                     <h1
                       class="text-white display-12 display-sm-10 display-md-6 display-lg-4 display-xl-3 mb-1-9 mb-md-2-9"
+                      lng-tag="herotitle1"
                     >
                       Professional Security Officers Protecting
                       <strong class="text-secondary font-weight-600"
                         >Your Premises 24/7.</strong
                       >
                     </h1>
-                    <a href="about-us.html" class="butn primary"
+                    <a
+                      href="about-us.html"
+                      lng-tag="learnmore"
+                      class="butn primary"
                       ><span>Learn More</span></a
                     >
                   </div>
@@ -145,18 +169,24 @@
               <div class="d-table-cell align-middle">
                 <div class="row align-items-center">
                   <div class="col-md-10 col-lg-9 col-xl-7">
-                    <span class="text-secondary mb-3 sub-title"
+                    <span
+                      class="text-secondary mb-3 sub-title"
+                      lng-tag="welcome"
                       >Welcome to Al Hadmool</span
                     >
                     <h1
                       class="text-white display-12 display-sm-10 display-md-6 display-lg-4 display-xl-3 mb-1-9 mb-md-2-9"
+                      lng-tag="herotitle2"
                     >
                       Top-Tier Security Solutions for Your
                       <strong class="text-secondary font-weight-600"
                         >Business and Community.</strong
                       >
                     </h1>
-                    <a href="about-us.html" class="butn primary"
+                    <a
+                      href="about-us.html"
+                      lng-tag="learnmore"
+                      class="butn primary"
                       ><span>Learn More</span></a
                     >
                   </div>
@@ -174,11 +204,14 @@
               <div class="d-table-cell align-middle">
                 <div class="row align-items-center">
                   <div class="col-md-10 col-lg-9 col-xl-7">
-                    <span class="text-secondary mb-3 sub-title"
+                    <span
+                      class="text-secondary mb-3 sub-title"
+                      lng-tag="welcome"
                       >Welcome to Al Hadmool
                     </span>
                     <h1
                       class="text-white display-12 display-sm-10 display-md-6 display-lg-4 display-xl-3 mb-1-9 mb-md-2-9"
+                      lng-tag="herotitle3"
                     >
                       Expert
                       <strong class="text-secondary font-weight-600"
@@ -186,7 +219,10 @@
                       >
                       Services Tailored to Your Needs.
                     </h1>
-                    <a href="about-us.html" class="butn primary"
+                    <a
+                      href="about-us.html"
+                      lng-tag="learnmore"
+                      class="butn primary"
                       ><span class="">Learn more</span></a
                     >
                   </div>
@@ -211,8 +247,8 @@
             >
               <div class="pe-xxl-6">
                 <div class="section-heading left text-start mb-0">
-                  <span>About Us</span>
-                  <h2 class="mb-0">
+                  <span lng-tag="about">About Us</span>
+                  <h2 class="mb-0" lng-tag="abouttitle">
                     Excellent solutions and services for
                     <strong class="text-primary font-weight-600"
                       >securities.</strong
@@ -280,14 +316,22 @@
                     >
                       <span class="countup">471</span>+
                     </h3>
-                    <h3 class="mb-1-6 mb-sm-1-9 text-white">
+                    <h3
+                      class="mb-1-6 mb-sm-1-9 text-white"
+                      lng-tag="abouttitle1"
+                    >
                       Provides Special Civil Security Services.
                     </h3>
-                    <h5 class="h6 text-white">Security becomes easier!</h5>
-                    <p class="text-white">
+                    <h5 class="h6 text-white" lng-tag="abouttitle2">
+                      Security becomes easier!
+                    </h5>
+                    <p class="text-white" lng-tag="abouttitle3">
                       There are so many variations of securities available.
                     </p>
-                    <a href="about-us.html" class="text-secondary white-hover"
+                    <a
+                      href="about-us.html"
+                      lng-tag="readmore"
+                      class="text-secondary white-hover"
                       >Read More &#10230;</a
                     >
                   </div>
@@ -307,8 +351,8 @@
           <div class="row align-items-stretch">
             <div class="col-lg-5 wow fadeIn" data-wow-delay="200ms">
               <div class="section-heading left wow fadeIn text-start">
-                <span>Our services</span>
-                <h2>
+                <span lng-tag="ourservices">Our services</span>
+                <h2 lng-tag="servicetitle">
                   Awesome security
                   <strong class="text-primary">services.</strong>
                 </h2>
@@ -321,102 +365,70 @@
                   <div class="card card-style1">
                     <div
                       class="service-card bg-img cover-background"
-                      data-background="img/content/service-01.jpg"
+                      data-background="img/content/it-tech.png"
                     >
                       <div class="service-details">
                         <h3 class="mb-3 h5">
-                          <a href="javascript:void(0)">Services </a>
+                          <a href="javascript:void(0)" lng-tag="s-tt1"
+                            >Infrastructure Technology
+                          </a>
                         </h3>
-                        <p class="mb-3">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Sint, repudiandae!
-                        </p>
-                        <a href="javascript:void(0)">Read More &#10230;</a>
                       </div>
                     </div>
                   </div>
                   <div class="card card-style1">
                     <div
                       class="service-card bg-img cover-background"
-                      data-background="img/content/service-01.jpg"
+                      data-background="img/content/service-02.jpg"
                     >
                       <div class="service-details">
                         <h3 class="mb-3 h5">
-                          <a href="javascript:void(0)">Services </a>
+                          <a href="javascript:void(0)" lng-tag="s-tt2"
+                            >Security Systems
+                          </a>
                         </h3>
-                        <p class="mb-3">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Sint, repudiandae!
-                        </p>
-                        <a href="javascript:void(0)">Read More &#10230;</a>
                       </div>
                     </div>
                   </div>
                   <div class="card card-style1">
                     <div
                       class="service-card bg-img cover-background"
-                      data-background="img/content/service-01.jpg"
+                      data-background="img/content/service-03.jpg"
                     >
                       <div class="service-details">
                         <h3 class="mb-3 h5">
-                          <a href="javascript:void(0)">Services </a>
+                          <a href="javascript:void(0)" lng-tag="s-tt3"
+                            >Wireless Services</a
+                          >
                         </h3>
-                        <p class="mb-3">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Sint, repudiandae!
-                        </p>
-                        <a href="javascript:void(0)">Read More &#10230;</a>
                       </div>
                     </div>
                   </div>
                   <div class="card card-style1">
                     <div
                       class="service-card bg-img cover-background"
-                      data-background="img/content/service-01.jpg"
+                      data-background="img/content/service-04.jpg"
                     >
                       <div class="service-details">
                         <h3 class="mb-3 h5">
-                          <a href="javascript:void(0)">Services </a>
+                          <a href="javascript:void(0)" lng-tag="s-tt4"
+                            >Factory Settings</a
+                          >
                         </h3>
-                        <p class="mb-3">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Sint, repudiandae!
-                        </p>
-                        <a href="javascript:void(0)">Read More &#10230;</a>
                       </div>
                     </div>
                   </div>
                   <div class="card card-style1">
                     <div
                       class="service-card bg-img cover-background"
-                      data-background="img/content/service-01.jpg"
+                      data-background="img/content/service-05.jpg"
                     >
                       <div class="service-details">
                         <h3 class="mb-3 h5">
-                          <a href="javascript:void(0)">Services </a>
+                          <a href="javascript:void(0)" lng-tag="s-tt5"
+                            >Biotechnology</a
+                          >
                         </h3>
-                        <p class="mb-3">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Sint, repudiandae!
-                        </p>
-                        <a href="javascript:void(0)">Read More &#10230;</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card card-style1">
-                    <div
-                      class="service-card bg-img cover-background"
-                      data-background="img/content/service-01.jpg"
-                    >
-                      <div class="service-details">
-                        <h3 class="mb-3 h5">
-                          <a href="javascript:void(0)">Services </a>
-                        </h3>
-                        <p class="mb-3">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Sint, repudiandae!
-                        </p>
-                        <a href="javascript:void(0)">Read More &#10230;</a>
                       </div>
                     </div>
                   </div>
@@ -590,8 +602,7 @@
                   class="section-heading left text-start wow fadeIn"
                   data-wow-delay="100ms"
                 >
-                  <span class="text-white">We Provides</span>
-                  <h2 class="text-white">
+                  <h2 class="text-white" lng-tag="whatweprovide">
                     We provide
                     <strong class="text-secondary">Security And Safety.</strong>
                   </h2>
@@ -608,10 +619,16 @@
                     ></span>
                   </div>
                   <div class="flex-grow-1">
-                    <h3 class="text-white h4 mb-3 font-weight-400">
+                    <h3
+                      class="text-white h4 mb-3 font-weight-400"
+                      lng-tag="residential"
+                    >
                       Residential
                     </h3>
-                    <p class="text-white opacity8 mb-0">
+                    <p
+                      class="text-white opacity8 mb-0"
+                      lng-tag="residentialtext"
+                    >
                       We provide the best latest technology for residential and
                       our staff are available in 24/7 at customers call.
                     </p>
@@ -626,10 +643,13 @@
                     ></span>
                   </div>
                   <div class="flex-grow-1">
-                    <h3 class="text-white h4 mb-3 font-weight-400">
+                    <h3
+                      class="text-white h4 mb-3 font-weight-400"
+                      lng-tag="corporate"
+                    >
                       Corporate
                     </h3>
-                    <p class="text-white opacity8 mb-0">
+                    <p class="text-white opacity8 mb-0" lng-tag="corporatetext">
                       We provide the best latest technology of corporate and our
                       staff are available in at customers support.
                     </p>
@@ -639,7 +659,7 @@
                   href="our-services.html"
                   class="text-white text-secondary-hover wow"
                   data-wow-delay="800ms"
-                  ><span>Read More &#10230;</span></a
+                  ><span lng-tag="readmore">Read More &#10230;</span></a
                 >
               </div>
             </div>
@@ -652,66 +672,11 @@
         />
       </section>
 
-      <!-- <section class="mt-5 pb-4 wow fadeIn bg-secondary" data-wow-delay="100ms">
-        <div class="container-fluid px-sm-14">
-          <div class="owl-carousel owl-theme client-style1 text-center">
-            <div class="image-wrapper">
-              <img
-                class="hover-image"
-                src="img/partners/partner-01.png"
-                alt="..."
-              />
-              <img
-                class="main-image"
-                src="img/partners/partner-01.png"
-                alt="..."
-              />
-            </div>
-            <div class="image-wrapper">
-              <img
-                class="hover-image"
-                src="img/partners/partner-02.png"
-                alt="..."
-              />
-              <img
-                class="main-image"
-                src="img/partners/partner-02.png"
-                alt="..."
-              />
-            </div>
-            <div class="image-wrapper">
-              <img
-                class="hover-image"
-                src="img/partners/partner-03.png"
-                alt="..."
-              />
-              <img
-                class="main-image"
-                src="img/partners/partner-03.png"
-                alt="..."
-              />
-            </div>
-            <div class="image-wrapper">
-              <img
-                class="hover-image"
-                src="img/partners/partner-04.png"
-                alt="..."
-              />
-              <img
-                class="main-image"
-                src="img/partners/partner-04.png"
-                alt="..."
-              />
-            </div>
-          </div>
-        </div>
-      </section> -->
-
       <section>
         <div class="container">
           <div class="section-heading wow fadeIn" data-wow-delay="100ms">
-            <span>FAQ</span>
-            <h2 class="h1">
+            <span lng-tag="faq">FAQ</span>
+            <h2 class="h1" lng-tag="faqtitle">
               Frequently asked <strong class="text-primary">questions.</strong>
             </h2>
           </div>
@@ -731,6 +696,7 @@
                       data-bs-target="#collapseOne"
                       aria-expanded="true"
                       aria-controls="collapseOne"
+                      lng-tag="faq1"
                     >
                       What types of security services do you offer?
                     </button>
@@ -741,7 +707,7 @@
                     aria-labelledby="headingOne"
                     data-bs-parent="#accordion"
                   >
-                    <div class="card-body">
+                    <div class="card-body" lng-tag="faq1text">
                       We offer a comprehensive range of security services
                       including security guards, CCTV surveillance, alarm
                       systems, access control, patrol services, and 24/7
@@ -759,6 +725,7 @@
                       data-bs-target="#collapseTwo"
                       aria-expanded="false"
                       aria-controls="collapseTwo"
+                      lng-tag="faq2"
                     >
                       How do you ensure the reliability and professionalism of
                       your security personnel?
@@ -770,7 +737,7 @@
                     aria-labelledby="headingTwo"
                     data-bs-parent="#accordion"
                   >
-                    <div class="card-body">
+                    <div class="card-body" lng-tag="faq2text">
                       Our security personnel undergo rigorous background checks,
                       extensive training, and continuous professional
                       development to ensure they meet our high standards of
@@ -789,6 +756,7 @@
                       data-bs-target="#collapseThree"
                       aria-expanded="false"
                       aria-controls="collapseThree"
+                      lng-tag="faq3"
                     >
                       Can you provide customized security solutions for specific
                       needs?
@@ -800,7 +768,7 @@
                     aria-labelledby="headingThree"
                     data-bs-parent="#accordion"
                   >
-                    <div class="card-body">
+                    <div class="card-body" lng-tag="faq3text">
                       Yes, we specialize in creating customized security plans
                       that address the unique requirements of each client. Our
                       experts conduct thorough assessments and develop
@@ -818,6 +786,7 @@
                       data-bs-target="#collapseFour"
                       aria-expanded="false"
                       aria-controls="collapseFour"
+                      lng-tag="faq4"
                     >
                       What measures do you take to ensure 24/7 security
                       coverage?
@@ -829,7 +798,7 @@
                     aria-labelledby="headingFour"
                     data-bs-parent="#accordion"
                   >
-                    <div class="card-body">
+                    <div class="card-body" lng-tag="faq4text">
                       We have a dedicated operations center that provides
                       round-the-clock monitoring and support. Our team is always
                       on standby to respond to any security incidents, and we
@@ -847,6 +816,7 @@
                       data-bs-target="#collapseFive"
                       aria-expanded="false"
                       aria-controls="collapseFive"
+                      lng-tag="faq5"
                     >
                       How do I get started with your security services?
                     </button>
@@ -857,7 +827,7 @@
                     aria-labelledby="headingFive"
                     data-bs-parent="#accordion"
                   >
-                    <div class="card-body">
+                    <div class="card-body" lng-tag="faq5text">
                       Getting started is easy. Contact us via phone, email, or
                       through our website to schedule a consultation. Our team
                       will discuss your security needs, conduct a site
@@ -883,146 +853,9 @@
         </div>
       </section>
 
-      <section
-        class="bg-light bg-img background-position-center background-no-repeat"
-        data-background="img/content/map.png"
-      >
-        <div class="container">
-          <div class="row align-items-center">
-            <div
-              class="col-lg-7 mb-1-9 mb-lg-0 wow fadeIn"
-              data-wow-delay="200ms"
-            >
-              <div class="pe-xxl-2-3">
-                <div
-                  class="section-heading wow fadeIn text-start"
-                  data-wow-delay="100ms"
-                >
-                  <span>testimonial</span>
-                  <h2 class="m-0">
-                    What our
-                    <strong class="text-primary">customer says.</strong>
-                  </h2>
-                </div>
-                <div
-                  class="testimonial-carousel1 owl-carousel owl-theme mt-n4"
-                  data-slider-id="1"
-                >
-                  <div
-                    class="bg-white pt-2-9 p-1-9 border-radius-10 inner-text"
-                  >
-                    <p class="mb-1-6 lead">
-                      It fits our needs perfectly. I could probably go into
-                      sales for you. Really good. I am so pleased with this
-                      product. It really saves me time and effort.
-                    </p>
-                    <h6 class="mb-0">Ilene Dorsey</h6>
-                    <span class="small">Customer</span>
-                  </div>
-
-                  <div
-                    class="bg-white pt-2-9 p-1-9 border-radius-10 inner-text"
-                  >
-                    <p class="mb-1-6 lead">
-                      I will definitely be ordering again! It's all good. We've
-                      seen amazing results already. Cctv camera should be
-                      nominated for service of the year.
-                    </p>
-                    <h6 class="mb-0">Steven Bartley</h6>
-                    <span class="small">Customer</span>
-                  </div>
-
-                  <div
-                    class="bg-white pt-2-9 p-1-9 border-radius-10 inner-text"
-                  >
-                    <p class="mb-1-6 lead">
-                      Cctv camera is worth much more than I paid. Thanks guys,
-                      keep up the good work! We're loving it. I will recommend
-                      you to my colleagues.
-                    </p>
-                    <h6 class="mb-0">Rosemary Frye</h6>
-                    <span class="small">Customer</span>
-                  </div>
-
-                  <div
-                    class="bg-white pt-2-9 p-1-9 border-radius-10 inner-text"
-                  >
-                    <p class="mb-1-6 lead">
-                      Thank you for making it painless, pleasant and most of all
-                      hassle free! It's incredible. I could probably go into
-                      sales for you.
-                    </p>
-                    <h6 class="mb-0">Abigail Gunn</h6>
-                    <span class="small">Customer</span>
-                  </div>
-
-                  <div
-                    class="bg-white pt-2-9 p-1-9 border-radius-10 inner-text"
-                  >
-                    <p class="mb-1-6 lead">
-                      Cctv camera security should be nominated for service of
-                      the year. It's incredible. If you aren't sure, always go
-                      for cctv camera security.
-                    </p>
-                    <h6 class="mb-0">Archie Cousens</h6>
-                    <span class="small">Customer</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-5 wow fadeIn" data-wow-delay="400ms">
-              <div class="ps-xxl-6 position-relative">
-                <div
-                  class="owl-thumbs text-center testimonial-img"
-                  data-slider-id="1"
-                >
-                  <button class="owl-thumb-item me-lg-auto">
-                    <img
-                      src="img/avatar/avatar-11.jpg"
-                      class="img-radius1"
-                      alt="Author Image"
-                    />
-                  </button>
-                  <button class="owl-thumb-item ms-lg-auto img-2">
-                    <img
-                      src="img/avatar/avatar-15.jpg"
-                      class="img-radius2"
-                      alt="Author Image"
-                    />
-                  </button>
-                  <button class="owl-thumb-item me-lg-auto ms-lg-6 img-3">
-                    <img
-                      src="img/avatar/avatar-12.jpg"
-                      class="img-radius3"
-                      alt="Author Image"
-                    />
-                  </button>
-                  <button class="owl-thumb-item ms-lg-auto img-2">
-                    <img
-                      src="img/avatar/avatar-14.jpg"
-                      class="img-radius4"
-                      alt="Author Image"
-                    />
-                  </button>
-                  <button class="owl-thumb-item me-lg-auto">
-                    <img
-                      src="img/avatar/avatar-13.jpg"
-                      class="img-radius5"
-                      alt="Author Image"
-                    />
-                  </button>
-                </div>
-                <div class="square-shape top-35 left-25 z-index-9"></div>
-                <div class="square-shape-two bottom-20 left-35 z-index-9"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <footer class="bg-dark">
         <div class="container py-6 py-lg-8">
-          <div class="row mt-n2-9">
+          <div class="row mt-n2-9 justify-content-between">
             <div
               class="col-md-6 col-lg-5 mt-2-9 wow fadeIn"
               data-wow-delay="100ms"
@@ -1035,6 +868,7 @@
 
               <h4
                 class="text-white mb-1-9 fw-light w-lg-75 display-29 lh-base opacity8"
+                lng-tag="footerdesc"
               >
                 Providing exceptional civil security services with a focus on
                 quality, flexibility, and continuous development. Since our
@@ -1066,70 +900,21 @@
                 </li>
               </ul>
             </div>
-            <div
-              class="col-md-6 col-lg-3 mt-2-9 wow fadeIn"
-              data-wow-delay="150ms"
-            >
-              <h3 class="text-white h5 mb-1-9">Newsletter</h3>
-              <p class="text-white opacity9">
-                Don’t miss to subscribe to our new feeds.
-              </p>
-              <form
-                class="quform newsletter-form"
-                action="quform/newsletter-two.php"
-                method="post"
-                enctype="multipart/form-data"
-                onclick=""
-              >
-                <div class="quform-elements">
-                  <div class="row">
-                    <!-- Begin Text input element -->
-                    <div class="col-md-12">
-                      <div class="quform-element mb-0">
-                        <div class="quform-input">
-                          <input
-                            class="form-control"
-                            id="email_address"
-                            type="text"
-                            name="email_address"
-                            placeholder="Subscribe with us"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Text input element -->
 
-                    <!-- Begin Submit button -->
-                    <div class="col-md-12">
-                      <div class="quform-submit-inner">
-                        <button
-                          class="btn btn-white text-white m-0"
-                          type="submit"
-                        >
-                          <i class="fas fa-paper-plane"></i>
-                        </button>
-                      </div>
-                      <div class="quform-loading-wrap">
-                        <span class="quform-loading"></span>
-                      </div>
-                    </div>
-                    <!-- End Submit button -->
-                  </div>
-                </div>
-              </form>
-            </div>
             <div
               class="col-md-6 col-lg-3 mt-2-9 offset-lg-1 wow fadeIn"
               data-wow-delay="200ms"
             >
-              <h3 class="text-white h5 mb-1-9">Contacts</h3>
+              <h3 class="text-white h5 mb-1-9" lng-tag="contact">Contacts</h3>
               <div class="d-flex mb-1-9">
                 <div class="flex-shrink-0">
                   <img src="img/icons/icon-phone.png" alt="..." />
                 </div>
                 <div class="flex-grow-1 ms-3">
-                  <h4 class="mb-1 h5 text-white">Contact Us</h4>
-                  <p class="mb-0 text-white">(+966) 0501898080</p>
+                  <h4 class="mb-1 h5 text-white" lng-tag="contactUs">
+                    Contact Us
+                  </h4>
+                  <p class="mb-0 text-white">(+966) 501898080</p>
                 </div>
               </div>
               <div class="d-flex">
@@ -1137,7 +922,7 @@
                   <img src="img/icons/icon-mail.png" alt="..." />
                 </div>
                 <div class="flex-grow-1 ms-3">
-                  <h4 class="mb-1 h5 text-white">Mail Us</h4>
+                  <h4 class="mb-1 h5 text-white" lng-tag="mailUs">Mail Us</h4>
                   <p class="mb-0 text-white">support@hadmool.com</p>
                 </div>
               </div>
@@ -1158,6 +943,9 @@
       ><i class="fas fa-angle-up" aria-hidden="true"></i
     ></a>
 
+    <!-- translate -->
+    <script src="js/translate.js"></script>
+    <!-- ends -->
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
 

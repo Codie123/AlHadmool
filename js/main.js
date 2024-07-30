@@ -11,7 +11,7 @@
         t = s(".navbar-brand.dark img");
       e <= 50
         ? (s("header").removeClass("scrollHeader").addClass("fixedHeader"),
-          a.attr("src", "img/logos/logo-inner.png"))
+          a.attr("src", "img/logos/logo.png"))
         : (s("header").removeClass("fixedHeader").addClass("scrollHeader"),
           a.attr("src", "img/logos/logo.png")),
         o.attr("src", "img/logos/logo.png"),
@@ -309,5 +309,22 @@
         s(".portfolio-link").on("click", (e) => {
           e.stopPropagation();
         });
+
+      //This is id of HTML element (English) with attribute lng-tag
+      $("#enTranslator").click(function (e) {
+        e.preventDefault();
+        translate("en", "lng-tag");
+      });
+      //This is id of HTML element (Khmer) with attribute lng-tag
+      $("#arTranslator").click(function (e) {
+        e.preventDefault();
+        translate("ar", "lng-tag");
+      });
     });
 })(jQuery);
+function translate(lng, tagAttr) {
+  var translate = new Translate();
+
+  translate.init(tagAttr, lng);
+  translate.process();
+}

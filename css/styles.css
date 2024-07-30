@@ -1183,6 +1183,7 @@ a:active {
 .menu_area-light.scrollHeader .navbar > ul > li.current > a:after {
   border-color: transparent #1158e7 #1158e7 transparent;
 }
+
 @media screen and (min-width: 992px) {
   .navbar-light .navbar-nav li.has-sub > ul:after {
     content: "";
@@ -6970,3 +6971,25 @@ footer .phone a:focus {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 9999;
 }
+
+/* custome css */
+@media (max-width: 620px) {
+  .navbar-third {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0.6rem;
+    position: absolute;
+    top: 104%;
+    right: 0%;
+  }
+
+  .navbar-third li .butn.md {
+    padding: 12px 10px !important;
+  }
+  .navbar-third li span {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* end */

@@ -39,7 +39,7 @@
     <link href="css/styles.css" rel="stylesheet" />
   </head>
 
-  <body>
+  <body onload="translate('en','lng-tag')">
     <div id="preloader"></div>
 
     <div class="main-wrapper">
@@ -49,14 +49,13 @@
             <div class="row align-items-center">
               <div class="col-12 col-lg-12">
                 <div class="menu_area alt-font">
-                  <nav class="navbar navbar-expand-lg navbar-light p-0">
+                  <nav
+                    class="navbar navbar-expand-lg navbar-light p-0 position-relative"
+                  >
                     <div class="navbar-header navbar-header-custom">
                       <!-- start logo -->
                       <a href="index.html" class="navbar-brand"
-                        ><img
-                          id="logo"
-                          src="img/logos/logo-inner.png"
-                          alt="logo"
+                        ><img id="logo" src="img/logos/logo.png" alt="logo"
                       /></a>
                       <!-- end logo -->
                     </div>
@@ -70,16 +69,18 @@
                       style="display: none"
                     >
                       <li>
-                        <a href="index.html">Home</a>
+                        <a lng-tag="home" href="index.html">Home</a>
                       </li>
                       <li>
-                        <a href="about-us.html">About Us</a>
+                        <a lng-tag="about" href="about-us.html">About Us</a>
                       </li>
                       <li>
-                        <a href="our-services.html">Our Services</a>
+                        <a lng-tag="ourservices" href="our-services.html"
+                          >Our Services</a
+                        >
                       </li>
                       <li>
-                        <a href="contact.html">Contact</a>
+                        <a lng-tag="contact" href="contact.html">Contact</a>
                       </li>
                     </ul>
                     <!-- end menu area -->
@@ -88,10 +89,27 @@
                     <div
                       class="attr-nav align-items-xl-center ms-xl-auto main-font"
                     >
-                      <ul>
+                      <ul class="navbar-third">
                         <li class="d-none d-xl-inline-block">
-                          <a href="contact.html" class="butn text-white md"
+                          <a
+                            lng-tag="freequote"
+                            href="contact.html"
+                            class="butn text-white md"
                             ><span>Free Quote</span></a
+                          >
+                        </li>
+                        <li class="d-inline-flex">
+                          <span
+                            class="butn text-white md cursor-pointer"
+                            id="enTranslator"
+                            >En</span
+                          >
+                        </li>
+                        <li class="d-inline-flex">
+                          <span
+                            class="butn text-white md cursor-pointer"
+                            id="arTranslator"
+                            >عربي</span
                           >
                         </li>
                       </ul>
@@ -113,10 +131,10 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <h1>Our Services</h1>
+              <h1 lng-tag="ourservices">Our Services</h1>
               <ul>
-                <li><a href="index.html">Home</a></li>
-                <li>Our Services</li>
+                <li><a href="index.html" lng-tag="home">Home</a></li>
+                <li lng-tag="ourservices">Our Services</li>
               </ul>
             </div>
           </div>
@@ -145,6 +163,7 @@
                       data-bs-target="#collapseOne"
                       aria-expanded="true"
                       aria-controls="collapseOne"
+                      lng-tag="faq1"
                     >
                       What types of security services do you offer?
                     </button>
@@ -155,7 +174,7 @@
                     aria-labelledby="headingOne"
                     data-bs-parent="#accordion"
                   >
-                    <div class="card-body">
+                    <div class="card-body" lng-tag="faq2">
                       We offer a comprehensive range of security services
                       including security guards, CCTV surveillance, alarm
                       systems, access control, patrol services, and 24/7
@@ -173,6 +192,7 @@
                       data-bs-target="#collapseTwo"
                       aria-expanded="false"
                       aria-controls="collapseTwo"
+                      lmt-tag="faq2"
                     >
                       How do you ensure the reliability and professionalism of
                       your security personnel?
@@ -184,7 +204,7 @@
                     aria-labelledby="headingTwo"
                     data-bs-parent="#accordion"
                   >
-                    <div class="card-body">
+                    <div class="card-body" lng-tag="faq2">
                       Our security personnel undergo rigorous background checks,
                       extensive training, and continuous professional
                       development to ensure they meet our high standards of
@@ -203,6 +223,7 @@
                       data-bs-target="#collapseThree"
                       aria-expanded="false"
                       aria-controls="collapseThree"
+                      lng-tag="faq3"
                     >
                       Can you provide customized security solutions for specific
                       needs?
@@ -214,7 +235,7 @@
                     aria-labelledby="headingThree"
                     data-bs-parent="#accordion"
                   >
-                    <div class="card-body">
+                    <div class="card-body" lng-tag="faq3">
                       Yes, we specialize in creating customized security plans
                       that address the unique requirements of each client. Our
                       experts conduct thorough assessments and develop
@@ -232,6 +253,7 @@
                       data-bs-target="#collapseFour"
                       aria-expanded="false"
                       aria-controls="collapseFour"
+                      lng-tag="faq4"
                     >
                       What measures do you take to ensure 24/7 security
                       coverage?
@@ -243,7 +265,7 @@
                     aria-labelledby="headingFour"
                     data-bs-parent="#accordion"
                   >
-                    <div class="card-body">
+                    <div class="card-body" lng-tag="faq4text">
                       We have a dedicated operations center that provides
                       round-the-clock monitoring and support. Our team is always
                       on standby to respond to any security incidents, and we
@@ -261,6 +283,7 @@
                       data-bs-target="#collapseFive"
                       aria-expanded="false"
                       aria-controls="collapseFive"
+                      lng-tag="faq5"
                     >
                       How do I get started with your security services?
                     </button>
@@ -271,7 +294,7 @@
                     aria-labelledby="headingFive"
                     data-bs-parent="#accordion"
                   >
-                    <div class="card-body">
+                    <div class="card-body" lng-tag="faq5text">
                       Getting started is easy. Contact us via phone, email, or
                       through our website to schedule a consultation. Our team
                       will discuss your security needs, conduct a site
@@ -303,8 +326,8 @@
             </div>
             <div class="col-md-8 wow fadeIn" data-wow-delay="200ms">
               <div class="bg-secondary h-100 p-1-9 p-lg-6 position-relative">
-                <h3 class="text-white">Call Us (+966) 0501898080</h3>
-                <p class="text-white mb-0">
+                <h3 class="text-white">Call Us (+966) 501898080</h3>
+                <p class="text-white mb-0" lng-tag="callus">
                   If you're searching out advice, please call us. We will
                   discover you and get in touch.
                 </p>
@@ -322,8 +345,10 @@
       <section class="bg-dark">
         <div class="container">
           <div class="section-heading white wow fadeIn" data-wow-delay="200ms">
-            <span class="text-white">Process</span>
-            <h2 class="h1 text-white">Easy process steps</h2>
+            <span class="text-white" lng-tag="process">Process</span>
+            <h2 class="h1 text-white" lng-tag="processsteps">
+              Easy process steps
+            </h2>
           </div>
           <div class="row mt-n2-9">
             <div
@@ -335,10 +360,15 @@
                   <i class="icon-profile-male"></i>
                   <span class="process-number">01</span>
                 </div>
-                <h3 class="text-white mb-3 h5">Consultation</h3>
-                <p class="mb-0 w-lg-90 mx-auto text-white">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  .
+                <h3 class="text-white mb-3 h5" lng-tag="consultation">
+                  Consultation
+                </h3>
+                <p
+                  class="mb-0 w-lg-90 mx-auto text-white"
+                  lng-tag="consultationtext"
+                >
+                  Start your consultation with us. We will get in touch with you
+                  as soon as possible.
                 </p>
               </div>
             </div>
@@ -351,10 +381,14 @@
                   <i class="icon-notebook"></i>
                   <span class="process-number">02</span>
                 </div>
-                <h3 class="text-white mb-3 h5">Requirements</h3>
-                <p class="mb-0 w-lg-90 mx-auto text-white">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  .
+                <h3 class="text-white mb-3 h5" lng-tag="requirements">
+                  Requirements
+                </h3>
+                <p
+                  class="mb-0 w-lg-90 mx-auto text-white"
+                  lng-tag="requirementstext"
+                >
+                  Clearly define your security needs.
                 </p>
               </div>
             </div>
@@ -367,10 +401,14 @@
                   <i class="icon-globe"></i>
                   <span class="process-number">03</span>
                 </div>
-                <h3 class="text-white mb-3 h5">Final Stage</h3>
-                <p class="mb-0 w-lg-90 mx-auto text-white">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  .
+                <h3 class="text-white mb-3 h5" lng-tag="finalstage">
+                  Final Stage
+                </h3>
+                <p
+                  class="mb-0 w-lg-90 mx-auto text-white"
+                  lng-tag="finalstagetext"
+                >
+                  Defining the security plan.
                 </p>
               </div>
             </div>
@@ -381,8 +419,10 @@
       <section>
         <div class="container">
           <div class="section-heading">
-            <span>Our Services</span>
-            <h2 class="h1">Check our awesome services</h2>
+            <span lng-tag="ourservices">Our Services</span>
+            <h2 class="h1" lng-tag="servicetitle2">
+              Check our awesome services
+            </h2>
           </div>
           <div class="row g-xxl-5 mt-n2-9">
             <div
@@ -398,16 +438,16 @@
                     <img src="img/icons/icon-53.png" alt="Icon" />
                   </div>
                   <h3 class="mb-3 h4">
-                    <a href="#!">Infrastructure Technology</a>
+                    <a href="#!" lng-tag="s-tt1">Infrastructure Technology</a>
                   </h3>
-                  <p class="mb-3">
+                  <p class="mb-3" lng-tag="s-tt1-text">
                     Al-Hadmol Company helps you stay connected with customers,
                     employees, service providers, and partners using efficient
                     communication technologies. We offer a variety of solutions
                     and products to meet your business needs.
                   </p>
 
-                  <a href="#!">Read More &#10230;</a>
+                  <a href="#!" lng-tag="readmore">Read More &#10230;</a>
                 </div>
               </div>
             </div>
@@ -424,15 +464,15 @@
                     <img src="img/icons/icon-53.png" alt="Icon" />
                   </div>
                   <h3 class="mb-3 h4">
-                    <a href="#!">Security systems</a>
+                    <a href="#!" lng-tag="s-tt2">Security systems</a>
                   </h3>
-                  <p class="mb-3">
+                  <p class="mb-3" lng-tag="s-tt2-text">
                     Our partners, from large government agencies to small
                     enterprises, rely on our systems and security solutions. We
                     help companies define accurate security methodologies and
                     address security challenges.
                   </p>
-                  <a href="#!">Read More &#10230;</a>
+                  <a href="#!" lng-tag="readmore">Read More &#10230;</a>
                 </div>
               </div>
             </div>
@@ -449,14 +489,14 @@
                     <img src="img/icons/icon-53.png" alt="Icon" />
                   </div>
                   <h3 class="mb-3 h4">
-                    <a href="#!">Wireless Services</a>
+                    <a href="#!" lng-tag="s-tt3">Wireless Services</a>
                   </h3>
-                  <p class="mb-3">
+                  <p class="mb-3" lng-tag="s-tt3-text">
                     With Al-Hadmol solutions, your business becomes fully
                     mobile, enabling you to communicate and perform your work
                     from anywhere, anytime, and from any device.
                   </p>
-                  <a href="#!">Read More &#10230;</a>
+                  <a href="#!" lng-tag="readmore">Read More &#10230;</a>
                 </div>
               </div>
             </div>
@@ -473,14 +513,14 @@
                     <img src="img/icons/icon-53.png" class="" alt="Icon" />
                   </div>
                   <h3 class="mb-3 h4">
-                    <a href="#!">Factory Security Solutions</a>
+                    <a href="#!" lng-tag="s-tt4">Factory Security Solutions</a>
                   </h3>
-                  <p class="mb-3">
+                  <p class="mb-3" lng-tag="s-tt4-text">
                     Al-Hadmol Company’s clients get effective technologies to
                     manage a safe work environment by applying global safety
                     standards.
                   </p>
-                  <a href="#!">Read More &#10230;</a>
+                  <a href="#!" lng-tag="readmore">Read More &#10230;</a>
                 </div>
               </div>
             </div>
@@ -494,16 +534,16 @@
                 </div>
                 <div class="card-body rounded-bottom-md-5px">
                   <div class="icon-wrapper">
-                    <img src="img/icons/icon-08.png" alt="Icon" />
+                    <img src="img/icons/icon-53.png" alt="Icon" />
                   </div>
                   <h3 class="mb-3 h4">
-                    <a href="#!">Biotechnology</a>
+                    <a href="#!" lng-tag="s-tt5">Biotechnology</a>
                   </h3>
-                  <p class="mb-3">
+                  <p class="mb-3" lng-tag="s-tt5-text">
                     Biotech and security solutions, offering analytical devices
                     and technical support.
                   </p>
-                  <a href="#!">Read More &#10230;</a>
+                  <a href="#!" lng-tag="readmore">Read More &#10230;</a>
                 </div>
               </div>
             </div>
@@ -523,14 +563,16 @@
               class="col-lg-7 mb-1-9 mb-lg-0 wow fadeIn"
               data-wow-delay="100ms"
             >
-              <h2 class="h1 w-100 text-white mb-0">
+              <h2 class="h1 w-100 text-white mb-0" lng-tag="consultationtext2">
                 Protect your home or business with our unique solutions
               </h2>
             </div>
             <div class="col-lg-5 wow fadeIn mt-3" data-wow-delay="200ms">
               <div class="text-start text-lg-end">
                 <a class="butn" href="contact.html">
-                  <span class="text-btn">Get Free Consultation</span>
+                  <span class="text-btn" lng-tag="getfree"
+                    >Get Free Consultation</span
+                  >
                 </a>
               </div>
             </div>
@@ -551,7 +593,9 @@
                 >
                   <span class="countup">467</span>+
                 </h3>
-                <p class="mb-0 opacity9">Project Complete</p>
+                <p class="mb-0 opacity9" lng-tag="projectComplete">
+                  Project Complete
+                </p>
               </div>
               <div class="col-sm-6 col-lg-3 mt-1-9">
                 <h3
@@ -559,7 +603,7 @@
                 >
                   <span class="countup">30</span>k
                 </h3>
-                <p class="mb-0 opacity9">Happy Client</p>
+                <p class="mb-0 opacity9" lng-tag="happyClient">Happy Client</p>
               </div>
               <div class="col-sm-6 col-lg-3 mt-1-9">
                 <h3
@@ -567,7 +611,9 @@
                 >
                   <span class="countup">236</span>
                 </h3>
-                <p class="mb-0 opacity9">Dealer Equipment</p>
+                <p class="mb-0 opacity9" lng-tag="dealerEquipment">
+                  Dealer Equipment
+                </p>
               </div>
               <div class="col-sm-6 col-lg-3 mt-1-9">
                 <h3
@@ -575,7 +621,7 @@
                 >
                   <span class="countup">50</span>+
                 </h3>
-                <p class="mb-0 opacity9">Award Winner</p>
+                <p class="mb-0 opacity9" lng-tag="awardWinner">Award Winner</p>
               </div>
             </div>
           </div>
@@ -584,7 +630,7 @@
 
       <footer class="bg-dark">
         <div class="container py-6 py-lg-8">
-          <div class="row mt-n2-9">
+          <div class="row mt-n2-9 justify-content-between">
             <div
               class="col-md-6 col-lg-5 mt-2-9 wow fadeIn"
               data-wow-delay="100ms"
@@ -597,6 +643,7 @@
 
               <h4
                 class="text-white mb-1-9 fw-light w-lg-75 display-29 lh-base opacity8"
+                lng-tag="footerdesc"
               >
                 Providing exceptional civil security services with a focus on
                 quality, flexibility, and continuous development. Since our
@@ -628,70 +675,21 @@
                 </li>
               </ul>
             </div>
-            <div
-              class="col-md-6 col-lg-3 mt-2-9 wow fadeIn"
-              data-wow-delay="150ms"
-            >
-              <h3 class="text-white h5 mb-1-9">Newsletter</h3>
-              <p class="text-white opacity9">
-                Don’t miss to subscribe to our new feeds.
-              </p>
-              <form
-                class="quform newsletter-form"
-                action="quform/newsletter-two.php"
-                method="post"
-                enctype="multipart/form-data"
-                onclick=""
-              >
-                <div class="quform-elements">
-                  <div class="row">
-                    <!-- Begin Text input element -->
-                    <div class="col-md-12">
-                      <div class="quform-element mb-0">
-                        <div class="quform-input">
-                          <input
-                            class="form-control"
-                            id="email_address"
-                            type="text"
-                            name="email_address"
-                            placeholder="Subscribe with us"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Text input element -->
 
-                    <!-- Begin Submit button -->
-                    <div class="col-md-12">
-                      <div class="quform-submit-inner">
-                        <button
-                          class="btn btn-white text-white m-0"
-                          type="submit"
-                        >
-                          <i class="fas fa-paper-plane"></i>
-                        </button>
-                      </div>
-                      <div class="quform-loading-wrap">
-                        <span class="quform-loading"></span>
-                      </div>
-                    </div>
-                    <!-- End Submit button -->
-                  </div>
-                </div>
-              </form>
-            </div>
             <div
               class="col-md-6 col-lg-3 mt-2-9 offset-lg-1 wow fadeIn"
               data-wow-delay="200ms"
             >
-              <h3 class="text-white h5 mb-1-9">Contacts</h3>
+              <h3 class="text-white h5 mb-1-9" lng-tag="contact">Contacts</h3>
               <div class="d-flex mb-1-9">
                 <div class="flex-shrink-0">
                   <img src="img/icons/icon-phone.png" alt="..." />
                 </div>
                 <div class="flex-grow-1 ms-3">
-                  <h4 class="mb-1 h5 text-white">Contact Us</h4>
-                  <p class="mb-0 text-white">(+966) 0501898080</p>
+                  <h4 class="mb-1 h5 text-white" lng-tag="contactUs">
+                    Contact Us
+                  </h4>
+                  <p class="mb-0 text-white">(+966) 501898080</p>
                 </div>
               </div>
               <div class="d-flex">
@@ -699,7 +697,7 @@
                   <img src="img/icons/icon-mail.png" alt="..." />
                 </div>
                 <div class="flex-grow-1 ms-3">
-                  <h4 class="mb-1 h5 text-white">Mail Us</h4>
+                  <h4 class="mb-1 h5 text-white" lng-tag="mailUs">Mail Us</h4>
                   <p class="mb-0 text-white">support@hadmool.com</p>
                 </div>
               </div>
@@ -720,7 +718,9 @@
       ><i class="fas fa-angle-up" aria-hidden="true"></i
     ></a>
 
-    <!-- all js include start -->
+    <!-- translate  -->
+    <script src="js/translate.js"></script>
+    <!-- ends -->
 
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
@@ -733,9 +733,6 @@
 
     <!-- jquery -->
     <script src="js/core.min.js"></script>
-
-    <!-- search -->
-    <script src="search/search.js"></script>
 
     <!-- custom scripts -->
     <script src="js/main.js"></script>

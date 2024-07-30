@@ -39,7 +39,7 @@
     <link href="css/styles.css" rel="stylesheet" />
   </head>
 
-  <body>
+  <body onload="translate('en','lng-tag')">
     <div id="preloader"></div>
 
     <div class="main-wrapper">
@@ -49,14 +49,13 @@
             <div class="row align-items-center">
               <div class="col-12 col-lg-12">
                 <div class="menu_area alt-font">
-                  <nav class="navbar navbar-expand-lg navbar-light p-0">
+                  <nav
+                    class="navbar navbar-expand-lg navbar-light p-0 position-relative"
+                  >
                     <div class="navbar-header navbar-header-custom">
                       <!-- start logo -->
                       <a href="index.html" class="navbar-brand"
-                        ><img
-                          id="logo"
-                          src="img/logos/logo-inner.png"
-                          alt="logo"
+                        ><img id="logo" src="img/logos/logo.png" alt="logo"
                       /></a>
                       <!-- end logo -->
                     </div>
@@ -70,16 +69,18 @@
                       style="display: none"
                     >
                       <li>
-                        <a href="index.html">Home</a>
+                        <a lng-tag="home" href="index.html">Home</a>
                       </li>
                       <li>
-                        <a href="about-us.html">About Us</a>
+                        <a lng-tag="about" href="about-us.html">About Us</a>
                       </li>
                       <li>
-                        <a href="our-services.html">Our Services</a>
+                        <a lng-tag="ourservices" href="our-services.html"
+                          >Our Services</a
+                        >
                       </li>
                       <li>
-                        <a href="contact.html">Contact</a>
+                        <a lng-tag="contact" href="contact.html">Contact</a>
                       </li>
                     </ul>
                     <!-- end menu area -->
@@ -88,10 +89,27 @@
                     <div
                       class="attr-nav align-items-xl-center ms-xl-auto main-font"
                     >
-                      <ul>
+                      <ul class="navbar-third">
                         <li class="d-none d-xl-inline-block">
-                          <a href="contact.html" class="butn text-white md"
+                          <a
+                            lng-tag="freequote"
+                            href="contact.html"
+                            class="butn text-white md"
                             ><span>Free Quote</span></a
+                          >
+                        </li>
+                        <li class="d-inline-flex">
+                          <span
+                            class="butn text-white md cursor-pointer"
+                            id="enTranslator"
+                            >En</span
+                          >
+                        </li>
+                        <li class="d-inline-flex">
+                          <span
+                            class="butn text-white md cursor-pointer"
+                            id="arTranslator"
+                            >عربي</span
                           >
                         </li>
                       </ul>
@@ -113,10 +131,10 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <h1>Contact Us</h1>
+              <h1 lng-tag="contactUs">Contact Us</h1>
               <ul>
-                <li><a href="index.html">Home</a></li>
-                <li>Contact Us</li>
+                <li><a href="index.html" lng-tag="home">Home</a></li>
+                <li lng-tag="contactUs">Contact Us</li>
               </ul>
             </div>
           </div>
@@ -134,8 +152,10 @@
       <section class="contact-form">
         <div class="container">
           <div class="section-heading wow fadeIn pb-2-9" data-wow-delay="100ms">
-            <span>Get In Touch</span>
-            <h2 class="h1">We’re always here for you to give best service</h2>
+            <span lng-tag="getInTouch">Get In Touch</span>
+            <h2 class="h1" lng-tag="getInTouchText">
+              We’re always here for you to give best service
+            </h2>
           </div>
           <div class="row g-xxl-5 mt-n1-9">
             <div
@@ -147,12 +167,12 @@
                   <i class="ti-mobile fs-1 text-white"></i>
                 </div>
                 <div class="contact-content">
-                  <h4 class="h3 mb-3">Call Us</h4>
-                  <h2 class="title-hover">Call Us</h2>
+                  <h4 class="h3 mb-3" lng-tag="callUstitle">Call Us</h4>
+                  <h2 class="title-hover" lng-tag="callUstitle">Call Us</h2>
                   <a
                     href="tel:+966501898080"
                     class="d-block font-weight-500 mb-1 display-md-28"
-                    >(+966) 0501898080</a
+                    >(+966) 501898080</a
                   >
                 </div>
               </div>
@@ -167,8 +187,8 @@
                   <i class="ti-email fs-1 text-white"></i>
                 </div>
                 <div class="contact-content">
-                  <h4 class="h3 mb-3">Email Address</h4>
-                  <h2 class="title-hover">Email</h2>
+                  <h4 class="h3 mb-3" lng-tag="emailAddress">Email Address</h4>
+                  <h2 class="title-hover" lng-tag="email">Email</h2>
                   <a
                     href="mailto:support@hadmool.com"
                     class="d-block font-weight-500 mb-1 display-md-28"
@@ -187,199 +207,14 @@
                   <i class="ti-location-pin fs-1 text-white"></i>
                 </div>
                 <div class="contact-content">
-                  <h4 class="h3 mb-3">Address</h4>
-                  <h2 class="title-hover">Address</h2>
+                  <h4 class="h3 mb-3" lng-tag="address">Address</h4>
+                  <h2 class="title-hover" lng-tag="address">Address</h2>
                   <span
                     class="d-block font-weight-500 w-xxl-55 mx-auto display-md-28"
-                    >XWQH+VGM, Warehouse And Factories Subdivision 73553, Saudi
-                    Arabia</span
+                    >Al Khobar,<br />
+
+                    Saudi Arabia</span
                   >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="pt-0">
-        <div class="container">
-          <div class="row gx-lg-0 justify-content-center">
-            <div
-              class="col-lg-6 wow fadeIn d-none d-lg-block"
-              data-wow-delay="100ms"
-            >
-              <div
-                class="bg-img h-100 cover-background"
-                data-overlay-dark="0"
-                data-background="img/bg/bg-03.jpg"
-              ></div>
-            </div>
-            <div class="col-lg-6">
-              <div
-                class="wow fadeIn position-relative z-index-9"
-                data-wow-delay="200ms"
-              >
-                <div class="border p-1-6 p-sm-1-9 p-lg-2-2 form-background">
-                  <h2 class="mb-3 h3">Call us or fill the form</h2>
-                  <form
-                    class="quform"
-                    action="quform/contact.php"
-                    method="post"
-                    enctype="multipart/form-data"
-                    onclick=""
-                  >
-                    <div class="quform-elements">
-                      <div class="row">
-                        <!-- Begin Text input element -->
-                        <div class="col-md-6">
-                          <div class="quform-element">
-                            <div class="form-group">
-                              <label for="name"
-                                >Your Name
-                                <span class="quform-required">*</span></label
-                              >
-                              <div class="quform-input">
-                                <input
-                                  class="form-control"
-                                  id="name"
-                                  type="text"
-                                  name="name"
-                                  placeholder="Your name here"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- End Text input element -->
-
-                        <!-- Begin Text input element -->
-                        <div class="col-md-6">
-                          <div class="quform-element">
-                            <div class="form-group">
-                              <label for="email"
-                                >Your Email
-                                <span class="quform-required">*</span></label
-                              >
-                              <div class="quform-input">
-                                <input
-                                  class="form-control"
-                                  id="email"
-                                  type="text"
-                                  name="email"
-                                  placeholder="Your email here"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- End Text input element -->
-
-                        <!-- Begin Text input element -->
-                        <div class="col-md-6">
-                          <div class="quform-element quform-select-replaced">
-                            <div class="form-group">
-                              <label for="subject"
-                                >Your Subject
-                                <span class="quform-required">*</span></label
-                              >
-                              <div class="quform-input">
-                                <input
-                                  class="form-control"
-                                  id="subject"
-                                  type="text"
-                                  name="subject"
-                                  placeholder="Your subject here"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- End Text input element -->
-
-                        <!-- Begin Text input element -->
-                        <div class="col-md-6">
-                          <div class="quform-element">
-                            <div class="form-group">
-                              <label for="phone">Contact Number</label>
-                              <div class="quform-input">
-                                <input
-                                  class="form-control"
-                                  id="phone"
-                                  type="text"
-                                  name="phone"
-                                  placeholder="Your phone here"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- End Text input element -->
-
-                        <!-- Begin Textarea element -->
-                        <div class="col-md-12">
-                          <div class="quform-element">
-                            <div class="form-group">
-                              <label for="message"
-                                >Message
-                                <span class="quform-required">*</span></label
-                              >
-                              <div class="quform-input">
-                                <textarea
-                                  class="form-control"
-                                  id="message"
-                                  name="message"
-                                  rows="3"
-                                  placeholder="Tell us a few words"
-                                ></textarea>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- End Textarea element -->
-
-                        <!-- Begin Captcha element -->
-                        <div class="col-md-12">
-                          <div class="quform-element">
-                            <div class="form-group">
-                              <div class="quform-input">
-                                <input
-                                  class="form-control"
-                                  id="type_the_word"
-                                  type="text"
-                                  name="type_the_word"
-                                  placeholder="Type the below word"
-                                />
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <div class="quform-captcha">
-                                <div class="quform-captcha-inner">
-                                  <img
-                                    src="quform/images/captcha/courier-new-light.png"
-                                    alt="..."
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- End Captcha element -->
-
-                        <!-- Begin Submit button -->
-                        <div class="col-md-12">
-                          <div class="quform-submit-inner">
-                            <button class="butn border-0" type="submit">
-                              Send Message
-                            </button>
-                          </div>
-                          <div class="quform-loading-wrap text-start">
-                            <span class="quform-loading"></span>
-                          </div>
-                        </div>
-                        <!-- End Submit button -->
-                      </div>
-                    </div>
-                  </form>
                 </div>
               </div>
             </div>
@@ -398,10 +233,9 @@
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-
       <footer class="bg-dark">
         <div class="container py-6 py-lg-8">
-          <div class="row mt-n2-9">
+          <div class="row mt-n2-9 justify-content-between">
             <div
               class="col-md-6 col-lg-5 mt-2-9 wow fadeIn"
               data-wow-delay="100ms"
@@ -414,6 +248,7 @@
 
               <h4
                 class="text-white mb-1-9 fw-light w-lg-75 display-29 lh-base opacity8"
+                lng-tag="footerdesc"
               >
                 Providing exceptional civil security services with a focus on
                 quality, flexibility, and continuous development. Since our
@@ -445,70 +280,21 @@
                 </li>
               </ul>
             </div>
-            <div
-              class="col-md-6 col-lg-3 mt-2-9 wow fadeIn"
-              data-wow-delay="150ms"
-            >
-              <h3 class="text-white h5 mb-1-9">Newsletter</h3>
-              <p class="text-white opacity9">
-                Don’t miss to subscribe to our new feeds.
-              </p>
-              <form
-                class="quform newsletter-form"
-                action="quform/newsletter-two.php"
-                method="post"
-                enctype="multipart/form-data"
-                onclick=""
-              >
-                <div class="quform-elements">
-                  <div class="row">
-                    <!-- Begin Text input element -->
-                    <div class="col-md-12">
-                      <div class="quform-element mb-0">
-                        <div class="quform-input">
-                          <input
-                            class="form-control"
-                            id="email_address"
-                            type="text"
-                            name="email_address"
-                            placeholder="Subscribe with us"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Text input element -->
 
-                    <!-- Begin Submit button -->
-                    <div class="col-md-12">
-                      <div class="quform-submit-inner">
-                        <button
-                          class="btn btn-white text-white m-0"
-                          type="submit"
-                        >
-                          <i class="fas fa-paper-plane"></i>
-                        </button>
-                      </div>
-                      <div class="quform-loading-wrap">
-                        <span class="quform-loading"></span>
-                      </div>
-                    </div>
-                    <!-- End Submit button -->
-                  </div>
-                </div>
-              </form>
-            </div>
             <div
               class="col-md-6 col-lg-3 mt-2-9 offset-lg-1 wow fadeIn"
               data-wow-delay="200ms"
             >
-              <h3 class="text-white h5 mb-1-9">Contacts</h3>
+              <h3 class="text-white h5 mb-1-9" lng-tag="contact">Contacts</h3>
               <div class="d-flex mb-1-9">
                 <div class="flex-shrink-0">
                   <img src="img/icons/icon-phone.png" alt="..." />
                 </div>
                 <div class="flex-grow-1 ms-3">
-                  <h4 class="mb-1 h5 text-white">Contact Us</h4>
-                  <p class="mb-0 text-white">(+966) 0501898080</p>
+                  <h4 class="mb-1 h5 text-white" lng-tag="contactUs">
+                    Contact Us
+                  </h4>
+                  <p class="mb-0 text-white">(+966) 501898080</p>
                 </div>
               </div>
               <div class="d-flex">
@@ -516,7 +302,7 @@
                   <img src="img/icons/icon-mail.png" alt="..." />
                 </div>
                 <div class="flex-grow-1 ms-3">
-                  <h4 class="mb-1 h5 text-white">Mail Us</h4>
+                  <h4 class="mb-1 h5 text-white" lng-tag="mailUs">Mail Us</h4>
                   <p class="mb-0 text-white">support@hadmool.com</p>
                 </div>
               </div>
@@ -537,7 +323,9 @@
       ><i class="fas fa-angle-up" aria-hidden="true"></i
     ></a>
 
-    <!-- all js include start -->
+    <!-- translate -->
+    <script src="js/translate.js"></script>
+    <!-- ends -->
 
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>

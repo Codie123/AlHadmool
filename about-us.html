@@ -39,7 +39,7 @@
     <link href="css/styles.css" rel="stylesheet" />
   </head>
 
-  <body>
+  <body onload="translate('en','lng-tag')">
     <div id="preloader"></div>
 
     <div class="main-wrapper">
@@ -49,14 +49,13 @@
             <div class="row align-items-center">
               <div class="col-12 col-lg-12">
                 <div class="menu_area alt-font">
-                  <nav class="navbar navbar-expand-lg navbar-light p-0">
+                  <nav
+                    class="navbar navbar-expand-lg navbar-light p-0 position-relative"
+                  >
                     <div class="navbar-header navbar-header-custom">
                       <!-- start logo -->
                       <a href="index.html" class="navbar-brand"
-                        ><img
-                          id="logo"
-                          src="img/logos/logo-inner.png"
-                          alt="logo"
+                        ><img id="logo" src="img/logos/logo.png" alt="logo"
                       /></a>
                       <!-- end logo -->
                     </div>
@@ -70,16 +69,18 @@
                       style="display: none"
                     >
                       <li>
-                        <a href="index.html">Home</a>
+                        <a lng-tag="home" href="index.html">Home</a>
                       </li>
                       <li>
-                        <a href="about-us.html">About Us</a>
+                        <a lng-tag="about" href="about-us.html">About Us</a>
                       </li>
                       <li>
-                        <a href="our-services.html">Our Services</a>
+                        <a lng-tag="ourservices" href="our-services.html"
+                          >Our Services</a
+                        >
                       </li>
                       <li>
-                        <a href="contact.html">Contact</a>
+                        <a lng-tag="contact" href="contact.html">Contact</a>
                       </li>
                     </ul>
                     <!-- end menu area -->
@@ -88,10 +89,27 @@
                     <div
                       class="attr-nav align-items-xl-center ms-xl-auto main-font"
                     >
-                      <ul>
+                      <ul class="navbar-third">
                         <li class="d-none d-xl-inline-block">
-                          <a href="contact.html" class="butn text-white md"
+                          <a
+                            lng-tag="freequote"
+                            href="contact.html"
+                            class="butn text-white md"
                             ><span>Free Quote</span></a
+                          >
+                        </li>
+                        <li class="d-inline-flex">
+                          <span
+                            class="butn text-white md cursor-pointer"
+                            id="enTranslator"
+                            >En</span
+                          >
+                        </li>
+                        <li class="d-inline-flex">
+                          <span
+                            class="butn text-white md cursor-pointer"
+                            id="arTranslator"
+                            >عربي</span
                           >
                         </li>
                       </ul>
@@ -113,14 +131,14 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <h1>About Us</h1>
+              <h1 lng-tag="about">About Us</h1>
               <ul>
                 <li>
-                  <a href="index.html">
+                  <a href="index.html" lng-tag="home">
                     <i class="hgi-stroke hgi-home-01"></i> Home</a
                   >
                 </li>
-                <li>About Us</li>
+                <li lng-tag="about">About Us</li>
               </ul>
             </div>
           </div>
@@ -161,7 +179,7 @@
                 <div class="story-video position-absolute about-story-video">
                   <a
                     class="video video_btn"
-                    href="https://www.youtube.com/watch?v=cQLJiUagQnM"
+                    href="https://www.youtube.com/watch?v=V-VVrkgL2ko"
                     ><i class="fas fa-play"></i
                   ></a>
                 </div>
@@ -189,8 +207,10 @@
                         <img src="img/icons/icon-51.png" alt="Icon Image" />
                       </div>
                       <div class="flex-grow-1 ms-3">
-                        <h4 class="h5">Security Guards</h4>
-                        <p class="mb-0">
+                        <h4 class="h5" lng-tag="securityGuards">
+                          Security Guards
+                        </h4>
+                        <p class="mb-0" lng-tag="securityGuardstext">
                           Qualified manpower for advanced security protection.
                         </p>
                       </div>
@@ -202,15 +222,17 @@
                         <img src="img/icons/icon-53.png" alt="Icon Image" />
                       </div>
                       <div class="flex-grow-1 ms-3">
-                        <h4 class="h5">Network Security</h4>
-                        <p class="mb-0">
+                        <h4 class="h5" lng-tag="networkSecurity">
+                          Network Security
+                        </h4>
+                        <p class="mb-0" lng-tag="networkSecuritytext">
                           Enhancing continuous connections and communication.
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <p class="mb-1-9">
+                <p class="mb-1-9" lng-tag="abouttext">
                   Our integrated security forces combine advanced skills and
                   extensive training to provide comprehensive protection
                   solutions tailored to meet your specific needs.
@@ -234,7 +256,9 @@
               <h3 class="display-13 display-md-11 display-lg-8 mb-1 text-white">
                 <span class="countup">467</span>+
               </h3>
-              <p class="mb-0 text-white opacity9">Project Complete</p>
+              <p class="mb-0 text-white opacity9" lng-tag="projectComplete">
+                Project Complete
+              </p>
             </div>
             <div
               class="col-sm-6 col-md-3 mt-1-6 text-center wow fadeIn"
@@ -243,7 +267,9 @@
               <h3 class="display-13 display-md-11 display-lg-8 mb-1 text-white">
                 <span class="countup">30</span>k
               </h3>
-              <p class="mb-0 text-white opacity9">Happy Client</p>
+              <p class="mb-0 text-white opacity9" lng-tag="happyClient">
+                Happy Client
+              </p>
             </div>
             <div
               class="col-sm-6 col-md-3 mt-1-6 text-center wow fadeIn"
@@ -252,7 +278,9 @@
               <h3 class="display-13 display-md-11 display-lg-8 mb-1 text-white">
                 <span class="countup">236</span>
               </h3>
-              <p class="mb-0 text-white opacity9">Dealer Equipment</p>
+              <p class="mb-0 text-white opacity9" lng-tag="dealerEquipment">
+                Dealer Equipment
+              </p>
             </div>
             <div
               class="col-sm-6 col-md-3 mt-1-6 text-center wow fadeIn"
@@ -261,7 +289,9 @@
               <h3 class="display-13 display-md-11 display-lg-8 mb-1 text-white">
                 <span class="countup">50</span>+
               </h3>
-              <p class="mb-0 text-white opacity9">Award Winner</p>
+              <p class="mb-0 text-white opacity9" lng-tag="awardWinner">
+                Award Winner
+              </p>
             </div>
           </div>
         </div>
@@ -273,12 +303,14 @@
             <div class="col-lg-5 wow fadeIn" data-wow-delay="100ms">
               <div class="bg-dark p-1-9 p-sm-2-9 rounded">
                 <div class="section-heading mb-3 mb-xl-4 text-start">
-                  <span class="text-white">why choose us</span>
-                  <h2 class="h3 w-100 text-white">
+                  <span class="text-white" lng-tag="whychooseus"
+                    >why choose us</span
+                  >
+                  <h2 class="h3 w-100 text-white" lng-tag="whychooseustitle">
                     We provide latest Security Services
                   </h2>
                 </div>
-                <p class="mb-1-9 text-white opacity8">
+                <p class="mb-1-9 text-white opacity8" lng-tag="whychooseustext">
                   Al-Hadmol Contracting Company operates with technical teams
                   that have the experience and efficiency to carry out all
                   contracting works, from building construction, building
@@ -288,7 +320,9 @@
                 </p>
                 <div class="progress-text text-white">
                   <div class="row">
-                    <div class="col-10"><strong>First Phase</strong></div>
+                    <div class="col-10">
+                      <strong lng-tag="firstphase">First Phase</strong>
+                    </div>
                     <div class="col-2 text-end">85%</div>
                   </div>
                 </div>
@@ -304,7 +338,9 @@
                 </div>
                 <div class="progress-text text-white">
                   <div class="row">
-                    <div class="col-10"><strong>Second Phase</strong></div>
+                    <div class="col-10">
+                      <strong lng-tag="secondphase">Second Phase</strong>
+                    </div>
                     <div class="col-2 text-end">50%</div>
                   </div>
                 </div>
@@ -320,7 +356,9 @@
                 </div>
                 <div class="progress-text text-white">
                   <div class="row">
-                    <div class="col-10"><strong>Third Phase</strong></div>
+                    <div class="col-10">
+                      <strong lng-tag="thirdphase">Third Phase</strong>
+                    </div>
                     <div class="col-2 text-end">70%</div>
                   </div>
                 </div>
@@ -344,7 +382,9 @@
                 class="bg-img h-100 why-choose-block ms-2-9 rounded-start"
                 data-background="img/content/01.jpg"
               >
-                <span class="content">We're epic since 1429 AH </span>
+                <span class="content" lng-tag="whychooseuscontent"
+                  >We're epic since 1429 AH
+                </span>
               </div>
             </div>
           </div>
@@ -360,8 +400,10 @@
       <section class="position-relative pt-0">
         <div class="container">
           <div class="section-heading">
-            <span class="">How It's Work</span>
-            <h2 class="h1">Involves just a few easy process steps</h2>
+            <span class="" lng-tag="howitworks">How It's Work</span>
+            <h2 class="h1" lng-tag="howitworkstext">
+              Involves just a few easy process steps
+            </h2>
           </div>
           <div class="row mt-n1-9">
             <div
@@ -372,7 +414,7 @@
                 <div class="icon-box icon-document"></div>
 
                 <div class="process-content">
-                  <h3 class="h5 mb-3">Get Quotes</h3>
+                  <h3 class="h5 mb-3" lng-tag="getquotes">Get Quotes</h3>
                   <h4 class="h1 mb-0">01</h4>
                 </div>
               </div>
@@ -385,7 +427,7 @@
                 <div class="icon-box icon-profile-male"></div>
 
                 <div class="process-content">
-                  <h3 class="h5 mb-3">Consultation</h3>
+                  <h3 class="h5 mb-3" lng-tag="consultation">Consultation</h3>
                   <h4 class="h1 mb-0">02</h4>
                 </div>
               </div>
@@ -398,7 +440,7 @@
                 <div class="icon-box icon-notebook"></div>
 
                 <div class="process-content">
-                  <h3 class="h5 mb-3">Requirements</h3>
+                  <h3 class="h5 mb-3" lng-tag="requirements">Requirements</h3>
                   <h4 class="h1 mb-0">03</h4>
                 </div>
               </div>
@@ -411,7 +453,7 @@
                 <div class="icon-box icon-globe"></div>
 
                 <div class="process-content">
-                  <h3 class="h5 mb-3">Final Stage</h3>
+                  <h3 class="h5 mb-3" lng-tag="finalstage">Final Stage</h3>
                   <h4 class="h1 mb-0">04</h4>
                 </div>
               </div>
@@ -422,98 +464,9 @@
         <span class="triangle-7"></span>
       </section>
 
-      <section>
-        <div>
-          <div class="section-heading">
-            <span>Testimonial</span>
-            <h2 class="h1">What Our Clients Say</h2>
-          </div>
-          <div
-            class="row justify-content-center wow fadeIn"
-            data-wow-delay="200ms"
-          >
-            <div class="col-11 col-md-10 col-lg-6">
-              <div
-                class="testimonial-style1 position-inherit text-center owl-theme owl-carousel"
-                data-slider-id="1"
-              >
-                <div>
-                  <i
-                    class="ti-quote-left display-10 text-primary mb-4 d-block"
-                  ></i>
-                  <p class="mb-1-9 display-28 display-md-26 display-lg-24">
-                    I am really satisfied with my business. Your company is
-                    truly upstanding and is behind its product 100%. Thank you
-                    for making it painless, pleasant and most of all hassle
-                    free!
-                  </p>
-                  <h6 class="mb-0">Gregi Ambrose</h6>
-                  <span class="small">Languages Researcher</span>
-                </div>
-                <div>
-                  <i
-                    class="ti-quote-left display-10 text-primary mb-4 d-block"
-                  ></i>
-                  <p class="mb-1-9 display-28 display-md-26 display-lg-24">
-                    Thanks to business, we've just launched our 5th website!
-                    Thank you so much for your help. I don't always clop, but
-                    when I do, it's because of business.
-                  </p>
-                  <h6 class="mb-0">Jose Matsuda</h6>
-                  <span class="small">Mystery Shopper</span>
-                </div>
-                <div>
-                  <i
-                    class="ti-quote-left display-10 text-primary mb-4 d-block"
-                  ></i>
-                  <p class="mb-1-9 display-28 display-md-26 display-lg-24">
-                    I don't know what else to say. I would gladly pay over 600
-                    dollars for business. Keep up the excellent work. It's
-                    incredible. It's the perfect solution for our business.
-                  </p>
-                  <h6 class="mb-0">Allena Jones</h6>
-                  <span class="small">Real Estate Assessor</span>
-                </div>
-              </div>
-              <div class="owl-thumbs text-center mt-2-3" data-slider-id="1">
-                <button class="owl-thumb-item rounded-circle w-60px me-2">
-                  <img
-                    src="img/avatar/avatar-06.jpg"
-                    class="rounded-circle"
-                    alt="Author Image"
-                  />
-                </button>
-                <button class="owl-thumb-item rounded-circle w-60px me-2">
-                  <img
-                    src="img/avatar/avatar-07.jpg"
-                    class="rounded-circle"
-                    alt="Author Image"
-                  />
-                </button>
-                <button
-                  class="owl-thumb-item rounded-circle w-60px Testimonial Button active"
-                >
-                  <img
-                    src="img/avatar/avatar-08.jpg"
-                    class="rounded-circle"
-                    alt="Author Image"
-                  />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="d-none d-lg-inline-block p-3 border border-width-2 border-secondary position-absolute rounded-circle top-10 left-25 ani-top-bottom"
-        ></div>
-        <div
-          class="d-none d-lg-inline-block p-2 border border-width-2 border-secondary position-absolute rounded-circle top-5 left-25 ani-left-right"
-        ></div>
-      </section>
-
       <footer class="bg-dark">
         <div class="container py-6 py-lg-8">
-          <div class="row mt-n2-9">
+          <div class="row mt-n2-9 justify-content-between">
             <div
               class="col-md-6 col-lg-5 mt-2-9 wow fadeIn"
               data-wow-delay="100ms"
@@ -526,6 +479,7 @@
 
               <h4
                 class="text-white mb-1-9 fw-light w-lg-75 display-29 lh-base opacity8"
+                lng-tag="footerdesc"
               >
                 Providing exceptional civil security services with a focus on
                 quality, flexibility, and continuous development. Since our
@@ -557,70 +511,21 @@
                 </li>
               </ul>
             </div>
-            <div
-              class="col-md-6 col-lg-3 mt-2-9 wow fadeIn"
-              data-wow-delay="150ms"
-            >
-              <h3 class="text-white h5 mb-1-9">Newsletter</h3>
-              <p class="text-white opacity9">
-                Don’t miss to subscribe to our new feeds.
-              </p>
-              <form
-                class="quform newsletter-form"
-                action="quform/newsletter-two.php"
-                method="post"
-                enctype="multipart/form-data"
-                onclick=""
-              >
-                <div class="quform-elements">
-                  <div class="row">
-                    <!-- Begin Text input element -->
-                    <div class="col-md-12">
-                      <div class="quform-element mb-0">
-                        <div class="quform-input">
-                          <input
-                            class="form-control"
-                            id="email_address"
-                            type="text"
-                            name="email_address"
-                            placeholder="Subscribe with us"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Text input element -->
 
-                    <!-- Begin Submit button -->
-                    <div class="col-md-12">
-                      <div class="quform-submit-inner">
-                        <button
-                          class="btn btn-white text-white m-0"
-                          type="submit"
-                        >
-                          <i class="fas fa-paper-plane"></i>
-                        </button>
-                      </div>
-                      <div class="quform-loading-wrap">
-                        <span class="quform-loading"></span>
-                      </div>
-                    </div>
-                    <!-- End Submit button -->
-                  </div>
-                </div>
-              </form>
-            </div>
             <div
               class="col-md-6 col-lg-3 mt-2-9 offset-lg-1 wow fadeIn"
               data-wow-delay="200ms"
             >
-              <h3 class="text-white h5 mb-1-9">Contacts</h3>
+              <h3 class="text-white h5 mb-1-9" lng-tag="contact">Contacts</h3>
               <div class="d-flex mb-1-9">
                 <div class="flex-shrink-0">
                   <img src="img/icons/icon-phone.png" alt="..." />
                 </div>
                 <div class="flex-grow-1 ms-3">
-                  <h4 class="mb-1 h5 text-white">Contact Us</h4>
-                  <p class="mb-0 text-white">(+966) 0501898080</p>
+                  <h4 class="mb-1 h5 text-white" lng-tag="contactUs">
+                    Contact Us
+                  </h4>
+                  <p class="mb-0 text-white">(+966) 501898080</p>
                 </div>
               </div>
               <div class="d-flex">
@@ -628,7 +533,7 @@
                   <img src="img/icons/icon-mail.png" alt="..." />
                 </div>
                 <div class="flex-grow-1 ms-3">
-                  <h4 class="mb-1 h5 text-white">Mail Us</h4>
+                  <h4 class="mb-1 h5 text-white" lng-tag="mailUs">Mail Us</h4>
                   <p class="mb-0 text-white">support@hadmool.com</p>
                 </div>
               </div>
@@ -649,8 +554,9 @@
       ><i class="fas fa-angle-up" aria-hidden="true"></i
     ></a>
 
-    <!-- all js include start -->
-
+    <!-- translate -->
+    <script src="js/translate.js"></script>
+    <!-- ends -->
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
 
