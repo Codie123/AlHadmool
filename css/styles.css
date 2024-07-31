@@ -6973,7 +6973,7 @@ footer .phone a:focus {
 }
 
 /* custome css */
-@media (max-width: 620px) {
+@media (max-width: 330px) {
   .navbar-third {
     display: flex !important;
     flex-direction: column;
@@ -6982,7 +6982,8 @@ footer .phone a:focus {
     top: 104%;
     right: 0%;
   }
-
+}
+@media (max-width: 620px) {
   .navbar-third li .butn.md {
     padding: 12px 10px !important;
   }
