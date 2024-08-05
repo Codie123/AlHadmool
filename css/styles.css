@@ -1275,6 +1275,12 @@ a:active {
 .header-style2.scrollHeader .navbar-nav li.current > a {
   color: #fcaf17;
 }
+.header-style1.scrollHeader .navbar-third li:nth-child(2) span {
+  color: #000 !important;
+}
+.header-style1.scrollHeader .navbar-third li:nth-child(3) span {
+  color: #000 !important;
+}
 .header-style2.scrollHeader .navbar-nav li.current > a:hover {
   color: #fcaf17;
 }
