@@ -6979,6 +6979,10 @@ footer .phone a:focus {
 }
 
 /* custome css */
+.cuz-cerc-btn {
+  background: transparent;
+  border: 1px solid #1158e7;
+}
 @media (max-width: 330px) {
   .navbar-third {
     display: flex !important;
