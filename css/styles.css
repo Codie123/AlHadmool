@@ -6979,12 +6979,15 @@ footer .phone a:focus {
 }
 
 /* custome css */
-#loom-companion-mv3{
+#loom-companion-mv3 {
   display: none;
 }
 .cuz-cerc-btn {
   background: transparent;
   border: 1px solid #1158e7;
+}
+.vision img {
+  width: 60%;
 }
 @media (max-width: 330px) {
   .navbar-third {
