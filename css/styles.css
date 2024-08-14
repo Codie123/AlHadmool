@@ -6989,7 +6989,7 @@ footer .phone a:focus {
 .vision img {
   width: 60%;
 }
-@media (max-width: 330px) {
+@media (max-width: 376px) {
   .navbar-third {
     display: flex !important;
     flex-direction: column;

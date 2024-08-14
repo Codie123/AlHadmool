@@ -230,8 +230,8 @@
         }),
         s(".slider-fade1").owlCarousel({
           items: 1,
-          loop: !0,
-          dots: !1,
+          loop: 1,
+          dots: 1,
           margin: 0,
           nav: !0,
           navText: [
@@ -244,23 +244,6 @@
           animateIn: "fadeIn",
           animateOut: "fadeOut",
           responsive: { 992: { nav: !1, dots: !0 } },
-        }),
-        s(".slider-fade2").owlCarousel({
-          items: 1,
-          loop: !0,
-          dots: !0,
-          margin: 0,
-          nav: !1,
-          navText: [
-            "<i class='ti-angle-left'></i>",
-            "<i class='ti-angle-right'></i>",
-          ],
-          autoplay: !0,
-          autoplayTimeout: 6e3,
-          smartSpeed: 1500,
-          animateIn: "fadeIn",
-          animateOut: "fadeOut",
-          responsive: { 992: { nav: !0, dots: !1 } },
         }),
         s(".owl-carousel").owlCarousel({
           items: 1,
